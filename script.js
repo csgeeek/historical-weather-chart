@@ -56,7 +56,13 @@ const chartIt = async (ydata) => {
         options: {
             scales: {
               y: {
-                beginAtZero: false
+                beginAtZero: false,
+                ticks: {
+                    // Include a dollar sign in the ticks
+                    callback: function(value, index, ticks) {
+                        return value + '°C';
+                    }
+                }
               }
             }
           },
