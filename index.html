@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head">Nasa CSV</h1>
+    <div>
+        <form id="myform">
+            <label for="">Latitude</label>
+            <input type="number" id="lat">
+            <label for="">Longitude</label>
+            <input type="number" id="lon">
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+    <div class="chart-container" style="width: 1300px; height: 400px;">
+        <canvas id="chart"></canvas>    
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
