@@ -1,24 +1,25 @@
-const myform = document.querySelector('#myform');
-
 const prepY = async (latv, lonv) => {
     const ydata = [];
     const APPID = config.SECRET_API_KEY;    
-        if(myChart != undefined){
-            myChart.destroy();
-        }
-        for(let i = 1; i <= 12; i++){
-            let URL = `https://history.openweathermap.org/data/2.5/aggregated/month?month=${i}&lat=${latv}&lon=${lonv}&appid=${APPID}`;
-            const res = await fetch(URL);
-            const data = await res.json();
-            const temp = await data["result"]["temp"]["median"];
-            ydata.push(parseFloat(temp) - 273);
-        }
+    if(myChart != undefined){
+        myChart.destroy();
+    }
+    for(let i = 1; i <= 12; i++){
+        let URL = `https://history.openweathermap.org/data/2.5/aggregated/month?month=${i}&lat=${latv}&lon=${lonv}&appid=${APPID}`;
+        const res = await fetch(URL);
+        const data = await res.json();
+        const temp = await data["result"]["temp"]["median"];
+        ydata.push(parseFloat(temp) - 273);
+    }
     return ydata;
 }
+
+const myform = document.querySelector('#myform');
 
 myform.addEventListener('submit',async (e) => {
     e.preventDefault();
     console.log('Clicked');
+    document.querySelector('.message').innerHTML = '<p id="test">Wait for 15 seconds</p>';
     const lat = document.querySelector('#lat');
     const lon = document.querySelector('#lon');
     const latv = lat.value;
@@ -26,6 +27,8 @@ myform.addEventListener('submit',async (e) => {
     if((latv >= -90 && latv <= 90) && (lonv >= -180 && lonv <= 180)) {   
         const ydata = await prepY(latv, lonv);
         await chartIt(ydata);
+        document.querySelector('#test').remove();
+        scrollTo(0, 1200);
     }
 });
 

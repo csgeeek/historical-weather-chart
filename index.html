@@ -5,24 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
     <title>Document</title>
 </head>
 <body>
-    <h1 id="head">Global temperatures based on Geo-Location</h1>
-    <p>Please wait for 15s after clicking submit</p>
-    <div>
+    <section class="container">
+        <!-- <h1 id="head">Global temperatures based on Geo-Location</h1> -->
+
+        <div class="message"></div>
+        
         <form id="myform">
-            <label for="">Latitude</label>
-            <input type="number" id="lat">
-            <label for="">Longitude</label>
-            <input type="number" id="lon">
-            <button type="submit" class="btn">Submit</button>
+            <div class="latitude ip">
+                <label>Latitude</label> <br>
+                <input type="number" id="lat">
+            </div>
+            <div class="longitude ip">
+                <label>Longitude</label> <br>
+                <input type="number" id="lon">
+            </div>
+            <div class="ip">
+                <button type="submit" class="btn">Submit</button>
+            </div>
         </form>
-    </div>
-    <div class="chart-container" style="width: 1500px; height: 200px;">
+
+    </section>
+    <section class="chart-container" style="width: 1300px; height: 200px;">
         <canvas id="chart"></canvas>    
-    </div>
-    <script src="script.js"></script>
-    <script src="config.js"></script>
+    </section>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/config.js"></script>
 </body>
 </html>

@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+html{
+    scroll-behavior:smooth;
+}
+section{
+    min-height: 100vh;
+    padding:1rem 9%;
+    padding-top: 8rem;
+}
+
+.container{
+    position: relative;
+    /* height: 30vh; */
+    /* width: 100vw; */
+    /* background-image: linear-gradient(rgb(255, 108, 132), rgb(64, 64, 226), rgb(255, 204, 108)); */
+}
+#myform{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-48%, -50%);
+    border: 2px solid black;
+    height: 280px;
+    width: 300px;
+}
+
+.ip{
+    margin: 24px;
+    font-size: 23px;
+}
+
+button, input{
+    width: 100%;
+    border: 2px solid black;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.btn{
+    background-color: black;
+    color: white;
+}
+
