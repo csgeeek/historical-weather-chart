@@ -2,7 +2,7 @@ const myform = document.querySelector('#myform');
 
 const prepY = async (latv, lonv) => {
     const ydata = [];
-    const APPID = '7c09a72a41d8ffdfba52c2614e152903';    
+    const APPID = config.SECRET_API_KEY;    
         // api.openweathermap.org/data/2.5/weather?lat=34&lon=35&appid=7c09a72a41d8ffdfba52c2614e152903
         // https://history.openweathermap.org/data/2.5/aggregated/year?lat=35&lon=139&appid=4ba8b09cf4e53728e05a7b348f31fdeb
         // 
@@ -73,7 +73,7 @@ const chartIt = async (ydata) => {
         data: {
             labels: xlabels,
             datasets: [{
-                label: 'Global Average Temperatures',
+                label: 'Global Temperatures',
                 data: ydata,
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)'
