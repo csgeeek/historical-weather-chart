@@ -1,47 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 *{
     margin: 0;
     padding: 0;
-    
-}
-html{
-    scroll-behavior:smooth;
-}
-section{
-    min-height: 100vh;
-    padding:1rem 9%;
-    padding-top: 8rem;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
 }
 
+section{
+    height: 100vh;
+    /* border: 2px solid black; */
+}
+.s1 {
+    background-color: rgba(9, 1, 31, 0.884);
+    color: white;
+}
+.s2{
+    padding: 42px;
+    /* margin-top: 20px; */
+}
 .container{
     position: relative;
-    /* height: 30vh; */
-    /* width: 100vw; */
-    /* background-image: linear-gradient(rgb(255, 108, 132), rgb(64, 64, 226), rgb(255, 204, 108)); */
 }
+
 #myform{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-48%, -50%);
-    border: 2px solid black;
-    height: 280px;
-    width: 300px;
+    transform: translate(-50%, -50%);
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 5px;
 }
 
-.ip{
-    margin: 24px;
-    font-size: 23px;
+.fe{
+    margin: 40px;
 }
 
-button, input{
+.latitude, .longitude{
+    font-size: 19px;
+}
+
+input{
+    height: 35px;  
+    outline: none;
+}
+
+input, .btn{
     width: 100%;
-    border: 2px solid black;
-    height: 30px;
+    padding: 5px;
+    border: 1px solid rgba(9, 1, 31, 0.884);
     border-radius: 5px;
 }
 
 .btn{
-    background-color: black;
-    color: white;
+    background-color: rgb(255, 255, 255);
+    height: 35px;
+    width: 103%;
+    cursor:pointer;
 }
-

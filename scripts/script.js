@@ -28,7 +28,7 @@ myform.addEventListener('submit',async (e) => {
         const ydata = await prepY(latv, lonv);
         await chartIt(ydata);
         document.querySelector('#test').remove();
-        scrollTo(0, 1200);
+        scrollTo(0, 1000);
     }
 });
 
